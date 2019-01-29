@@ -1,0 +1,26 @@
+{
+  "name": "hookjs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maizify/hookjs.git"
+  },
+  "keywords": [
+    "hook"
+  ],
+  "author": "Maiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Maizify/hookjs/issues"
+  },
+  "homepage": "https://github.com/Maizify/hookjs#readme"
+}
