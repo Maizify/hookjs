@@ -1,5 +1,6 @@
 import Pool from './pool';
 import Action from './action';
+import Filter from './filter';
 
 export default class Hook {
   public name: string = '';
@@ -20,7 +21,12 @@ export default class Hook {
   }
 
   // for party-A
-  public doAction(name: string): void {
-    
+  public doAction(name: string, ...args: any): void {
+    if (!this.actionPool[name]) {
+      return;
+    }
+    this.actionPool[name].each((action: Action, index: number): void => {
+      action.do(...args);
+    });
   }
 }

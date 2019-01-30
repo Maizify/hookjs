@@ -1,6 +1,6 @@
-import Action from './action';
+import Hookable from './hookable';
 
-type PoolItem = Action;
+type PoolItem = Hookable;
 
 export default class Pool {
   protected list: PoolItem[] = [];
@@ -10,5 +10,9 @@ export default class Pool {
     this.list.sort((a: PoolItem, b: PoolItem): number => {
       return a.priority - b.priority;
     });
+  }
+
+  public each(cb: (item: PoolItem, index: number) => void): void {
+    this.list.forEach(cb);
   }
 }

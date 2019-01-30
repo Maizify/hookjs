@@ -11,4 +11,8 @@ export default class Action implements Hookable {
     this.callback = callback;
     this.priority = priority;
   }
+
+  public do(...args: any): void {
+
+  }
 }
